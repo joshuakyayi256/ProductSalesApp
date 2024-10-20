@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Synsify Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="clients.html">Our Clients</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Register for Updates</h2>
+        <form id="registerForm" action="register_user.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Synsify Agency. All rights reserved.
+    </div>
+</body>
+</html>

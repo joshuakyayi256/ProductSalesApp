@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Synsify Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="clients.html">Our Clients</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Order Your Service</h2>
+        <form id="orderForm" action="submit_order.php" method="POST">
+            <label for="service">Choose a service:</label>
+            <select id="service" name="service" required>
+                <option value="">--Select a Service--</option>
+                <option value="web-design">Web Design</option>
+                <option value="graphic-design">Graphic Design</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="social-media-management">Social Media Management</option>
+                <option value="app-development">App Development</option>
+            </select>
+
+            <label for="details">Additional Details:</label>
+            <textarea id="details" name="details" rows="5" placeholder="Describe your requirements..." required></textarea>
+
+            <input type="submit" value="Order Now">
+        </form>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Synsify Agency. All rights reserved.
+    </div>
+</body>
+</html>
