@@ -1,5 +1,17 @@
 // scripts.js
 
+window.addEventListener('scroll', function() {
+    let elements = document.querySelectorAll('.fade-in-section');
+    elements.forEach(function(element) {
+        let position = element.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
+        if (position < windowHeight - 100) {
+            element.classList.add('visible');
+        }
+    });
+});
+
+
 // Form Validation for Order and Registration Forms
 document.addEventListener('DOMContentLoaded', () => {
     const orderForm = document.getElementById('orderForm');

@@ -1,246 +1,252 @@
-
-
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    min-height: 100vh;
-    background-color: #f9f9f9;
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
 }
 
-/* Navigation Bar */
+/* Navbar Styling */
 .navbar {
-    width: 220px;
-    background-color: #2c3e50;
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
-    height: 100%;
-    overflow: auto;
-    padding-top: 20px;
-}
-
-.navbar img {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 100px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar ul {
-    list-style-type: none;
+    list-style: none;
+    display: flex;
 }
 
 .navbar ul li {
-    margin: 20px 0;
+    margin-right: 20px;
 }
 
 .navbar ul li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    padding: 12px 20px;
-    display: block;
-    transition: background 0.3s;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .navbar ul li a:hover {
     background-color: #2980b9;
-    border-left: 4px solid #ecf0f1;
+    border-radius: 4px;
 }
 
-/* Content Area */
-.content {
-    margin-left: 220px;
-    padding: 20px;
-    flex: 1;
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* Landing Page */
-.hero {
+/* Hero Section */
+.hero-header {
+    background-image: url('/ProductSalesApp/source/images/Modern\ Urban\ Office.jpeg'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 600px;
     text-align: center;
-    padding: 100px 20px;
-    background: url('/ProductSalesApp/source/images/Modern\ Urban\ Office.jpeg') no-repeat center center/cover;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
-.hero h1 {
-    font-size: 48px;
+.hero-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* For opacity */
+    z-index: 1;
+}
+
+.hero-header h1, .hero-header p, .cta {
+    position: relative;
+    z-index: 2;
     margin-bottom: 20px;
 }
 
-.hero p {
-    font-size: 20px;
+.hero-header h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
 }
 
-/* About Us Table */
-.team-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.hero-header p {
+    font-size: 18px;
 }
 
-.team-table th, .team-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
+.cta {
+    text-decoration: none;
+    color: white;
+    background-color: #2980b9;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #21618c;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
     text-align: center;
+    background-color: #fff;
+    margin-top: 20px;
 }
 
-.team-table th {
-    background-color: #f4f4f4;
+#our-story, #why-choose-us, #testimonials {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.team-table img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+#our-story h2, #why-choose-us h2, #testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-/* Products Page */
-.products {
+#our-story p, #why-choose-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Fade-In Effect for Sections */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Testimonials */
+#testimonials .testimonial {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    width: 60%;
+}
+
+#testimonials .testimonial p {
+    font-style: italic;
+    color: #555;
+}
+
+/* Services Section */
+.services-section {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
-.product {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.product img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.product p {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* CSS Transformations for Products */
-#product1 {
-    transform: translate(0, 0);
-}
-
-#product2 {
-    transform: rotate(30deg) translate(0, 0);
-}
-
-#product3 {
-    transform: skewX(30deg) skewY(30deg) translate(0, 0);
-}
-
-/* Order & Registration Forms */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
+.service {
+    background-color: #2980b9;
+    color: white;
+    width: 30%;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-form input[type="text"],
-form input[type="email"],
-form select,
-form textarea {
-    width: 100%;
-    padding: 10px;
+.service h2 {
+    font-size: 24px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
-form input[type="submit"] {
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
+.service p {
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-form input[type="submit"]:hover {
-    background-color: #2980b9;
-}
-
-/* Our Clients */
-.clients-list {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.clients-list li {
-    background-color: #fff;
-    padding: 15px 25px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.clients-list li:hover {
-    background-color: #2980b9;
-    color: white;
+.service:hover {
     transform: scale(1.05);
+    background-color: #21618c;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
+/* Order Page Packages */
+.order-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.package {
+    background-color: #f8f9fa;
+    border: 2px solid #2980b9;
+    width: 30%;
     padding: 20px;
-    background-color: #2c3e50;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: calc(100% - 220px);
-    margin-left: 220px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .navbar ul {
-        display: flex;
-        flex-direction: row;
-    }
-    .navbar ul li {
-        flex: 1;
-        text-align: center;
-    }
-    .content {
-        margin-left: 0;
-    }
-    .footer {
-        width: 100%;
-        margin-left: 0;
-    }
+.package h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #2980b9;
+}
+
+.package p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.package .cta {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.package .cta:hover {
+    background-color: #21618c;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
 }

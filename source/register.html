@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Synsify Services</title>
+    <title>Register - Synsify Agency</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
+
+    <!-- Navbar -->
     <div class="navbar">
-        <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo">
+        <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo" class="logo">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -20,21 +22,93 @@
         </ul>
     </div>
 
-    <div class="content">
-        <h2>Register for Updates</h2>
-        <form id="registerForm" action="register_user.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-
-            <input type="submit" value="Register">
-        </form>
+    <!-- Header with Background Image -->
+    <div class="hero-header">
+        <h1>Create Your Account</h1>
+        <p>Join Synsify today and get started with our professional services</p>
     </div>
 
+    <!-- Registration Form Section -->
+    <section id="registration" class="fade-in-section">
+        <h2>Register with Us</h2>
+        <p>Please fill in the form below to create an account.</p>
+
+        <form id="registrationForm" action="submit_registration.php" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your full name..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email address..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Your password..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="company">Company Name (Optional)</label>
+                <input type="text" id="company" name="company" placeholder="Your company name (if any)">
+            </div>
+
+            <div class="form-group">
+                <label for="services">Interested Services</label>
+                <select id="services" name="services" required>
+                    <option value="">Select a service</option>
+                    <option value="web_design">Web Design</option>
+                    <option value="graphic_design">Graphic Design</option>
+                    <option value="digital_marketing">Digital Marketing</option>
+                    <option value="app_development">App Development</option>
+                    <option value="social_media_management">Social Media Management</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="cta">Register</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="fade-in-section" style="text-align: center; margin-top: 50px;">
+        <h2>Already have an account?</h2>
+        <p>If you’re already a member, please <a href="login.html" style="text-decoration: underline;">Login here</a>.</p>
+    </section>
+
+    <!-- Footer -->
     <div class="footer">
         &copy; 2024 Synsify Agency. All rights reserved.
     </div>
+
+    <script>
+        // JavaScript Form Validation
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Additional validation rules can be added here
+
+            return true;
+        }
+    </script>
+
 </body>
 </html>
