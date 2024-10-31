@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Services - Synsify Agency</title>
+    <title>Order - Synsify</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js" defer></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
-
-    <!-- Navbar -->
     <div class="navbar">
         <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo" class="logo">
         <ul>
@@ -22,121 +21,39 @@
         </ul>
     </div>
 
-    <!-- Header with Background Image -->
-    <div class="hero-header">
-        <h1>Order Our Services</h1>
-        <p>Choose the service that suits your business needs</p>
-    </div>
+    <section id="order" class="content-section">
+        <h1>Order Services</h1>
+        <form action="/submit-order" method="POST">
+            <label for="service">Select a Service:</label>
+            <select id="service" name="service">
+                <option value="web-design">Web Design</option>
+                <option value="graphic-design">Graphic Design</option>
+                <option value="digital-marketing">Digital Marketing</option>
+            </select>
 
-    <!-- Service Packages Section -->
-    <section id="service-packages" class="fade-in-section">
-        <h2>Our Service Packages</h2>
-        <p>Select from our range of packages designed to meet your business requirements.</p>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <div class="package-grid">
-            <!-- Web Design Package -->
-            <div class="package">
-                <h3>Web Design</h3>
-                <ul>
-                    <li>Custom website design</li>
-                    <li>Responsive layouts</li>
-                    <li>SEO-friendly structure</li>
-                    <li>Up to 10 pages</li>
-                    <li>1 year of free support</li>
-                </ul>
-                <p><strong>Price:</strong> $500</p>
-                <a href="order-form.html" class="cta">Order Now</a>
-            </div>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
 
-            <!-- Digital Marketing Package -->
-            <div class="package">
-                <h3>Digital Marketing</h3>
-                <ul>
-                    <li>Social media management</li>
-                    <li>Paid ad campaigns</li>
-                    <li>Email marketing</li>
-                    <li>SEO optimization</li>
-                    <li>Content creation and scheduling</li>
-                </ul>
-                <p><strong>Price:</strong> $300 per month</p>
-                <a href="order-form.html" class="cta">Order Now</a>
-            </div>
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
 
-            <!-- Graphic Design Package -->
-            <div class="package">
-                <h3>Graphic Design</h3>
-                <ul>
-                    <li>Logo design</li>
-                    <li>Brand identity creation</li>
-                    <li>Business cards and brochures</li>
-                    <li>Social media graphics</li>
-                    <li>Unlimited revisions</li>
-                </ul>
-                <p><strong>Price:</strong> $150</p>
-                <a href="order-form.html" class="cta">Order Now</a>
-            </div>
-
-            <!-- App Development Package -->
-            <div class="package">
-                <h3>App Development</h3>
-                <ul>
-                    <li>iOS and Android compatibility</li>
-                    <li>UI/UX design included</li>
-                    <li>Bug fixes and updates for 6 months</li>
-                    <li>Secure and scalable</li>
-                    <li>Up to 5 custom features</li>
-                </ul>
-                <p><strong>Price:</strong> $1000</p>
-                <a href="order-form.html" class="cta">Order Now</a>
-            </div>
-
-            <!-- Social Media Management Package -->
-            <div class="package">
-                <h3>Social Media Management</h3>
-                <ul>
-                    <li>Account setup and branding</li>
-                    <li>Content creation</li>
-                    <li>3 posts per day on all platforms</li>
-                    <li>Monthly analytics report</li>
-                    <li>Community management</li>
-                </ul>
-                <p><strong>Price:</strong> $200 per month</p>
-                <a href="order-form.html" class="cta">Order Now</a>
-            </div>
-        </div>
+            <button type="submit" class="cta">Submit Order</button>
+        </form>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="order-testimonials" class="fade-in-section">
-        <h2>What Our Clients Say</h2>
-
-        <div class="testimonial">
-            <p>"The web design package from Synsify transformed our business. The new website looks professional, loads fast, and has increased customer engagement."</p>
-            <p>- Olivia N., Business Owner</p>
+    <footer>
+        <div class="footer">
+            &copy; 2024 Synsify Agency. All rights reserved. | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a>
         </div>
-
-        <div class="testimonial">
-            <p>"We have seen incredible results with the digital marketing package. Our social media presence is growing, and we’re getting more leads than ever."</p>
-            <p>- Brian K., Entrepreneur</p>
-        </div>
-
-        <div class="testimonial">
-            <p>"Synsify’s app development service exceeded our expectations. The app is seamless, and we’ve received great feedback from users."</p>
-            <p>- Susan M., Startup Founder</p>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="fade-in-section" style="text-align: center; margin-top: 50px;">
-        <h2>Start Your Project Today!</h2>
-        <p>Let’s get your business to the next level with our professional services. Choose a package and place your order.</p>
-        <a href="order-form.html" class="cta">Get Started</a>
-    </section>
-
-    <!-- Footer -->
-    <div class="footer">
-        &copy; 2024 Synsify Agency. All rights reserved.
-    </div>
-
+        
+    </footer>
 </body>
 </html>

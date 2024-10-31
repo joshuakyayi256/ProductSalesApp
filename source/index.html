@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synsify Services - Home</title>
+    <title>Synsify Services | Home</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js" defer></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
     <div class="navbar">
@@ -19,25 +20,44 @@
             <li><a href="clients.html">Our Clients</a></li>
         </ul>
     </div>
-
+ 
     <header class="hero-header">
-        <h1>Welcome to Synsify Agency</h1>
-        <p>Your one-stop solution for web design, graphic design, digital marketing, social media management, and app development.</p>
-        <button><a href="products.html" class="cta">Explore Our Services</a></button>
+        <div class="col-2">
+            <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Give Your Digital Prescence<br>A Top Tier Look!</h1>
+            <p>Greatness isn't always about what you just do, its also about consistency and hardwork and here at Synsify, We believe in delivering the best solutions for web design, graphic design, digital marketing, social media management, and app development.</p>
+        </div>
+        <div class="col-2"></div>
+        <div class="cta-buttons">
+            <a href="register.html" class="cta">Register</a>
+            <a href="order.html" class="cta">Order Services</a>
+        </div>
     </header>
+             <!-- FEATURED SERVICES -->
 
-    <section id="our-story" class="fade-in-section">
-        <h2>Our Story</h2>
-        <p>Synsify Agency started with a vision to empower businesses through innovative solutions. Over the years, we’ve helped countless businesses thrive by providing tailored services that make a real impact.</p>
+    <section id="services">
+        <h2>Overview of Services</h2>
+        <div class="row">
+            <div class="col-3">
+                <img src="" alt="" srcset="">
+            </div>
+            <div class="col-3">
+                <img src="" alt="" srcset="">
+            </div>
+            <div class="col-3">
+                <img src="" alt="" srcset="">
+            </div>
+        </div>
+        <ul>
+            <li>Web Design</li>
+            <li>Graphic Design</li>
+            <li>Digital Marketing</li>
+            <li>Social Media Management</li>
+            <li>App Development</li>
+        </ul>
     </section>
 
-    <section id="why-choose-us" class="fade-in-section">
-        <h2>Why Choose Us?</h2>
-        <p>At Synsify Agency, we are committed to delivering high-quality services that meet your business needs. Our team of experts leverages the latest technologies and trends to ensure your success.</p>
-    </section>
-
-    <section id="testimonials" class="fade-in-section">
-        <h2>Testimonials</h2>
+    <section id="testimonials">
+        <h2>Our Clients</h2>
         <div class="testimonial">
             <p>"Synsify helped us revamp our online presence and grow our business." - Client A</p>
         </div>
@@ -46,8 +66,21 @@
         </div>
     </section>
 
-    <div class="footer">
-        &copy; 2024 Synsify Agency. All rights reserved.
-    </div>
+    <section id="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="products.html">Explore Our Services</a></li>
+            <li><a href="order.html">Order Services</a></li>
+            <li><a href="register.html">Register Today</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="footer">
+            &copy; 2024 Synsify Agency. All rights reserved. | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a>
+        </div>        
+    </footer>
 </body>
 </html>
