@@ -15,7 +15,7 @@ body {
     padding: 15px;
     position: fixed;
     width: 200px;
-    height: 100%;
+    height: auto;
     top: 0;
     left: 0;
 }
@@ -83,7 +83,9 @@ section {
 }
 
  .categories {
-    margin: 70px;  
+    margin-left: 220px;
+    padding: 60px;
+    /* margin: 70px;   */
  }
 
 .col-3 {
@@ -101,6 +103,13 @@ section {
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+}
+
+.col-4 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
 }
 
 /* Services */
