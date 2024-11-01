@@ -5,12 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Clients - Synsify</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        /* Document Level CSS for Clients Page */
+        .clients-container {
+            margin: 50px auto;
+            padding: 20px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .client {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s;
+            box-shadow: black 0 0 10px;
+        }
+
+        .client:hover {
+            transform: translateY(-5px);
+        }
+
+        .client img {
+            width: 150px;
+            border-radius: 50%;
+        }
+    </style>
 
 </head>
 <body>
     <div class="navbar">
-        <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo" class="logo">
+        <a href="index.html">
+            <img src="/source/images/logo.png" alt="Company Logo" class="logo">
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -21,32 +50,35 @@
         </ul>
     </div>
 
-    <section id="clients" class="content-section">
-        <h1>Our Clients</h1>
-        <p>We’ve worked with some amazing companies to deliver top-notch solutions.</p>
+    <header class="hero-header" style="background-image: url(/source/images/Diverse\ Friends\ Gathering.jpeg);">
+        <h1 style="font-family: Dancing Script, cursive; font-size: 80px;">Our Clients</h1>
+        <p>What our clients say about us!</p>
+    </header>
 
-        <div class="client-logos">
-            <img src="/images/client1-logo.jpg" alt="Client 1">
-            <img src="/images/client2-logo.jpg" alt="Client 2">
-            <img src="/images/client3-logo.jpg" alt="Client 3">
+    <div class="clients-container">
+        <div class="client">
+            <img src="/source/images/Ekom Gideon.jpg" alt="Client 1">
+            <h4>Next Generation Global Connect</h4>
+            <p>"Fantastic service! Highly recommend!"</p>
         </div>
-
-        <section id="testimonials">
-            <h2>Testimonials</h2>
-            <div class="testimonial">
-                <p>"Synsify helped us revamp our online presence and grow our business." - Client A</p>
-            </div>
-            <div class="testimonial">
-                <p>"Amazing service and support! Highly recommend Synsify." - Client B</p>
-            </div>
-        </section>
-    </section>
+        <div class="client">
+            <img src="/source/images/Lynder Aliijah.jpg" alt="Client 2">
+            <h4>Justice Lynder Aliijah</h4>
+            <p>"Their team exceeded my expectations."</p>
+        </div>
+        <div class="client">
+            <img src="/source/images/Adonis Cortès.jpg" alt="Client 3">
+            <h4>Engineer Adonis Cortes</h4>
+            <p>"Professional and dedicated team!"</p>
+        </div>
+    </div>
 
     <footer><div class="footer">
-        &copy; 2024 Synsify Agency. All rights reserved. | 
-        <a href="privacy.html">Privacy Policy</a> | 
+        &copy; 2024 Synsify Agency. All rights reserved. |
+        <a href="privacy.html">Privacy Policy</a> |
         <a href="terms.html">Terms of Service</a>
     </div>
     </footer>
 </body>
 </html>
+

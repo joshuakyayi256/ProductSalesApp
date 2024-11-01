@@ -3,14 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Synsify</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS file -->
+    <style>
+        /* Document-Level CSS for Products Page */
+        .products-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+        }
 
+        .product {
+            width: 230px;
+            height: 350px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            position: relative;
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .product img {
+            width: 100%;
+            height: 50%;
+            border-radius: 8px; /* Add some rounding to the corners */
+        }
+
+        /* Different styles for each product */
+        .product1 {
+            background-color: #e74c3c;
+            transform: translate(150px, 60px);
+        }
+
+        .product2 {
+            background-color: #8e44ad;
+            transform: rotate(30deg) translate(200px, 100px);
+        }
+
+        .product3 {
+            background-color: #3498db;
+            transform: skew(30deg, 30deg) translate(50px, -80px);
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+    </style>
 </head>
 <body>
+
     <div class="navbar">
-        <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo" class="logo"> 
+        <a href="index.html">
+            <img src="/source/images/logo.png" alt="Company Logo" class="logo">
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -20,30 +67,36 @@
             <li><a href="clients.html">Our Clients</a></li>
         </ul>
     </div>
-
-    <section id="products" class="content-section">
-        <h1>Our Services</h1>
-        <div class="product" id="web-design">
-            <h3>Web Design</h3>
-            <p>Beautiful and functional websites.</p>
-            <a href="order.html">Order Now</a>
+    <header class="hero-header" style="background-image: url(/source/images/header.jpeg);">
+        <h1 style="font-family: Dancing Script, cursive; font-size: 80px;">Our Services</h1>
+        <p>At Synsify Agency, we are dedicated to empowering businesses through innovative design and marketing solutions. Our mission is to deliver quality services that make a real impact.</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="cta">Contact Us</a>
         </div>
-        <div class="product" id="graphic-design">
-            <h3>Graphic Design</h3>
+    </header>
+    <div class="products-container">
+        <a href="order.html" class="product product1">
+            <img src="/source/images/Software Developer at Work.jpeg" alt="Product 1">
+            <h3>Web Design & Development</h3>
+            <p>We build the most beautiful and functional websites.</p>
+        </a>
+        <a href="order.html" class="product product2">
+            <img src="/source/images/iPhone with Colorful App Icons on Orange Background.jpeg" alt="Product 2">
+            <h3>Social Media Management</h3>
             <p>Professional branding and design solutions.</p>
-            <a href="order.html">Order Now</a>
-        </div>
-        <div class="product" id="digital-marketing">
+        </a>
+        <a href="order.html" class="product product3">
+            <img src="/source/images/pexels-mikael-blomkvist-6483583.jpg" alt="Product 3">
             <h3>Digital Marketing</h3>
-            <p>Boost your online presence and engagement.</p>
-            <a href="order.html">Order Now</a>
-        </div>
-    </section>
+            <p>Boost your online presence and engagement through trusted practices likE SEO, Google Ads and Key word Search.</p>
+        </a>
+    </div>
 
     <section>
-        <h2 style="text-align: center; color: #007bff;">Get Started Today!</h2>
+        <h2 style="text-align: center; color: #007bff; padding-top: 1000px;">Get Started Today!</h2>
     <p style="text-align: center; max-width: 600px; margin: auto; font-size: 18px;">
-        Ready to take your business to the next level? Contact us today for a consultation, and let’s discuss how Synsify Agency can help you achieve your digital goals!
+        Ready to take your business to the next level? <BR></BR>
+        Contact us today for a consultation, and let’s discuss how Synsify Agency can help you achieve your digital goals!
     </p>
     </section>
 
@@ -53,7 +106,8 @@
             <a href="privacy.html">Privacy Policy</a> | 
             <a href="terms.html">Terms of Service</a>
         </div>
-        
+
     </footer>
 </body>
 </html>
+

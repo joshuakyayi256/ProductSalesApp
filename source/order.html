@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class="navbar">
-        <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo" class="logo">
+        <a href="index.html">
+            <img src="/source/images/logo.png" alt="Company Logo" class="logo">
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -21,8 +23,13 @@
         </ul>
     </div>
 
+    <header class="hero-header" style="background-image: url(/source/images/Modern\ Urban\ Office.jpeg);">
+        <h1 style="font-family: Dancing Script, cursive; font-size: 80px;">Book Our Services</h1>
+    </header>
+
     <section id="order" class="content-section">
-        <h1>Order Services</h1>
+
+        <h2 style="text-align: center; padding-top: 40px;">Please fill out the form below to reserve our services.</h2>
         <form action="/submit-order" method="POST">
             <label for="service">Select a Service:</label>
             <select id="service" name="service">
@@ -41,6 +48,8 @@
             <select id="payment" name="payment">
                 <option value="credit-card">Credit Card</option>
                 <option value="paypal">PayPal</option>
+                <option value="cash">Cash</option>
+                <option value="Mobile Money">Mobile Money</option>
             </select>
 
             <button type="submit" class="cta">Submit Order</button>
@@ -53,7 +62,7 @@
             <a href="privacy.html">Privacy Policy</a> | 
             <a href="terms.html">Terms of Service</a>
         </div>
-        
+
     </footer>
 </body>
 </html>

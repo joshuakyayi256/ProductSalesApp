@@ -6,11 +6,52 @@
     <title>About Us - Synsify</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        /* Document-Level CSS for About Us Page */
+        .about-us-container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .about-us-table th,
+        .about-us-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .about-us-table th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        .about-us-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .about-us-table img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Make images round */
+        }
+    </style>
 
 </head>
 <body>
     <div class="navbar">
-        <img src="/ProductSalesApp/source/images/SynsifyAgency-Logo.png" alt="Company Logo" class="logo">
+        <a href="index.html">
+            <img src="/source/images/logo.png" alt="Company Logo" class="logo">
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -21,8 +62,8 @@
         </ul>
     </div>
 
-    <header class="hero-header">
-        <h1>About Us</h1>
+    <header class="hero-header" style="background-image: url(/source/images/header.jpeg);">
+        <h1 style="font-family: Dancing Script, cursive; font-size: 80px;">About Us</h1>
         <p>At Synsify Agency, we are dedicated to empowering businesses through innovative design and marketing solutions. Our mission is to deliver quality services that make a real impact.</p>
         <div class="cta-buttons">
             <a href="products.html" class="cta">Explore Our Services</a>
@@ -32,30 +73,37 @@
     
 
     <section id="about-us" class="content-section">
-        <h1 style="text-align: center;">Our Mission & Vision</h1>
-        <p>
-            At Synsify Agency, we strive to empower businesses through innovative solutions that foster growth and success. Our mission is to partner with organizations of all sizes, providing tailored digital strategies that address their unique challenges and opportunities. 
-        </p>
+        <h1 style="text-align: center; font-family: Dancing Script, cursive; font-size: 50px;">Our Mission & Vision</h1>
+        <div class="article" style="padding-left: 100px; padding-right: 40px;">
+            <p>
+                <h3>Our Mission:</h3>At Synsify Agency, we strive to empower businesses through innovative solutions that foster growth and success. Our mission is to partner with organizations of all sizes, providing tailored digital strategies that address their unique challenges and opportunities.
+            </p>
+            <br>
+    
+            <p>
+                We understand that each business has distinct goals and aspirations, which is why we take a personalized approach to every project. By leveraging the latest technologies and industry best practices, we create compelling web designs, effective SEO strategies, and targeted advertising campaigns that not only enhance online visibility but also drive meaningful engagement with their target audiences.
+            </p>
 
-        <p>
-            We understand that each business has distinct goals and aspirations, which is why we take a personalized approach to every project. By leveraging the latest technologies and industry best practices, we create compelling web designs, effective SEO strategies, and targeted advertising campaigns that not only enhance online visibility but also drive meaningful engagement with their target audiences.
-        </p>
+            <br>
+            <p>
+                <h3>Our Vision:</h3>Our vision at Synsify Agency is to be a trusted partner for businesses seeking to thrive in the digital age. We envision a future where companies can harness the power of technology to achieve sustainable growth and success, while also making a positive impact on their communities and the world at large.
+            <p>
+                <br>
+                Our team of experienced professionals collaborates closely with clients to understand their vision and objectives. We believe in transparency and communication throughout the entire process, ensuring that our clients are informed and involved every step of the way. 
+            </p>
+            <br>
+            <p>
+                Moreover, we are committed to fostering a culture of innovation, continuously exploring new ideas and methodologies to stay ahead of the ever-evolving digital landscape. By doing so, we help businesses not just adapt to change, but thrive in it.
+            </p> 
+                
+            <p>
+                Ultimately, our goal at Synsify Agency is to cultivate long-lasting relationships with our clients, empowering them to achieve sustainable growth and success in their respective markets. We take pride in being a trusted partner on their journey towards digital transformation.
             
-        <p>
-            Our team of experienced professionals collaborates closely with clients to understand their vision and objectives. We believe in transparency and communication throughout the entire process, ensuring that our clients are informed and involved every step of the way. 
-        </p>
-            
-        <p>
-            Moreover, we are committed to fostering a culture of innovation, continuously exploring new ideas and methodologies to stay ahead of the ever-evolving digital landscape. By doing so, we help businesses not just adapt to change, but thrive in it.
-        </p> 
-            
-        <p>
-            Ultimately, our goal at Synsify Agency is to cultivate long-lasting relationships with our clients, empowering them to achieve sustainable growth and success in their respective markets. We take pride in being a trusted partner on their journey towards digital transformation.
-        
-        </p>
+            </p>
+        </div>
 
-        <h2 style="text-align: center;">Meet our Dedicated Team</h2>
-        <table>
+        <h2 style="text-align: center; font-family: Dancing Script, cursive; font-size: 50px;">Meet our Dedicated Team</h2>
+        <table class="about-us-table">
             <thead>
                 <tr>
                     <th>Photo</th>
@@ -66,16 +114,22 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="/images/member1.jpg" alt="John Doe" class="team-photo"></td>
-                    <td>John Doe</td>
-                    <td>johndoe@synsify.com</td>
+                    <td><img src="/source/images/Joshua-Magero.jpeg" alt="Member 1"></td>
+                    <td>Magero Kyayi Joshua</td>
+                    <td>kyayijoshua@gmail.com</td>
                     <td>Web Design, SEO</td>
                 </tr>
                 <tr>
-                    <td><img src="/images/member2.jpg" alt="Jane Smith" class="team-photo"></td>
-                    <td>Jane Smith</td>
-                    <td>janesmith@synsify.com</td>
-                    <td>Graphic Design, Branding</td>
+                    <td><img src="/source/images/Ganyana.jpg" alt="Member 2"></td>
+                    <td>Ganyana Emmanuel</td>
+                    <td>eganyana@yahoo.com</td>
+                    <td>Graphic Design, Marketing</td>
+                </tr>
+                <tr>
+                    <td><img src="path/to/photo3.jpg" alt="Member 3"></td>
+                    <td>Mike Johnson</td>
+                    <td>mike@example.com</td>
+                    <td>App Development, UX/UI</td>
                 </tr>
             </tbody>
         </table>
